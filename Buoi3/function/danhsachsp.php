@@ -31,6 +31,17 @@
         height: 40px;
         width: 40px;
       }
+      .tooltiptext{
+        display: none;
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: white;
+        box-shadow: 2px 2px 2px 2px silver;
+      }
+      .hoverDiv:hover .tooltiptext{
+        display: block; 
+      }
     </style>
 </head>
 <body>
@@ -79,12 +90,22 @@
       </tr>";
       while ($row = $result->fetch_assoc()){
         echo "<tr>
-                    <td>".$row['idsp']."</td>
+                    <td><div onmouseover='bigImg(".$row['idsp'].")' onmouseout='normalImg(".$row['idsp'].")'>".$row['idsp']."
+                    
+                      <div class='tooltiptext ".$row['idsp']."'>Tooltip text</div>
+                    </div>
+                    </td>
                     <td>".$row['tensp']."</td>
                     <td>".$row['chitietsp']."</td>
                     <td>".$row['giasp']."VND</td>
                     <td><a href='http://localhost/ltweb/buoi3/function/chitet.php?product=".$row['idsp']."'> Chi tiet </a></td>
-                    <td><a href='http://localhost/ltweb/buoi3/function/suasp.php?product=".$row['idsp']."'><img class='img_icon' src='./icon/edit.png'> </a></td>
+                    <td><a href='http://localhost/ltweb/buoi3/function/suasp.php?product=".$row['idsp']."'><img class='img_icon' src='./icon/edit.png'> </a>
+                      <br>
+                      <button onclick='LoadXMLDoc(".$row['idsp'].")'>
+                        BuoiCuoi
+                      </button>
+                    
+                    </td>
                     <td><a href='http://localhost/ltweb/buoi3/function/xoasp.php?idsp=".$row['idsp']."'><img class='img_icon' src='./icon/delete.png'> </a></td>
                     
               </tr>";
@@ -96,10 +117,66 @@
 
         ?>   
 
+      <div id='buoi5'
+      
+        style='
+          margin-top: 50px;
+        '
+      >
 
+
+      
+
+
+    </div>
 
 
       <script>
+
+
+function            normalImg(id){
+                document.getElementsByClassName("tooltiptext "+id)[0].style.display = "none";
+            }
+function        bigImg(id){
+               document.getElementsByClassName("tooltiptext "+id)[0].style.display = "block";
+               LoadXMLDocimg(id);
+            }
+
+            function LoadXMLDoc(id){
+                var xmlhttp;
+
+                if(window.XMLHttpRequest){
+                    xmlhttp =  new XMLHttpRequest()
+                }else{
+                    xmlhttp = new ActiveXObject('Microsoft.XMLHTTP');
+                }
+                xmlhttp.onreadystatechange = function () {
+                    if(xmlhttp.readyState==4 && xmlhttp.status==200){
+                        document.getElementById('buoi5').innerHTML = xmlhttp.responseText;
+                    }
+                }
+                xmlhttp.open('GET','xulysp.php?id='+id,true);
+                xmlhttp.send();
+
+            }
+ function LoadXMLDocimg(id){
+                var xmlhttp;
+
+                if(window.XMLHttpRequest){
+                    xmlhttp =  new XMLHttpRequest()
+                }else{
+                    xmlhttp = new ActiveXObject('Microsoft.XMLHTTP');
+                }
+                xmlhttp.onreadystatechange = function () {
+                    if(xmlhttp.readyState==4 && xmlhttp.status==200){
+                       document.getElementsByClassName("tooltiptext "+id)[0].innerHTML = xmlhttp.responseText;
+                    }
+                }
+                xmlhttp.open('GET','xulyspanh.php?id='+id,true);
+                xmlhttp.send();
+
+            }
+
          function delCookie() {
           //  delete_cookie('roundcube_sessauth');
            document.cookie = "userID=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
