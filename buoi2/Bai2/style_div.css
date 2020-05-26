@@ -1,0 +1,79 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+#wrap{
+    border: black solid 1px;
+    margin: auto;
+    width: 800px;
+}
+#title{
+    background-image: url(./header.jpg);
+    /* background-size: auto; */
+    height: 215px;
+    /* background-repeat: no-repeat; */
+    clear: both;
+
+}
+#title h1 {
+    /* position: absolute; */
+    margin: 20px 0 0 20px;
+    color: white;
+    text-shadow: 2px 2px pink;
+}
+#menu{
+    /* border: solid 1px black; */
+    float: left;
+    width: 150px;
+	height: 400px;
+}
+#menu h4{
+    background-color: blue;
+    color: white;
+    text-align: center;
+}
+#menu ul li a{
+    display: block;
+    padding: 4px;
+    border-bottom:1px solid white ;
+    
+    text-decoration: none;
+    margin: 2px;
+}
+#menu ul li a:hover{
+    background-color: pink;
+    /* color: ; */
+}
+#menu ul {
+    list-style: none;
+    background-color: rgb(156, 172, 185);
+}
+#content{
+    /* border: solid 1px black; */
+    width: 620px;
+	float: right;
+    margin: 5px;
+}
+#content h1 {
+    font-size: 25px;
+    color: blue;
+    margin-bottom: 8px;
+}
+#content p {
+    font-family: Arisal, sans-serif;
+    padding: 15px 0px;
+    font-size: 20px;
+    line-height: 35px;
+}
+#footer{
+    clear: both;
+    /* border: solid 1px black; */
+    /* display: block; */
+    /* float: none; */
+}
+#footer p{
+   font-size: 18px;
+   text-align: center;
+   padding: 8px;
+   border-top: plum solid 1px;
+}

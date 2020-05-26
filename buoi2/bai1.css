@@ -1,0 +1,22 @@
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+tr{
+    background-color: blanchedalmond;
+}
+table tr th{
+    background-color: silver;
+}
+.isContent{
+    background-color: rgb(116, 98, 98);
+}
+td:hover{
+    background-color: rgb(199, 218, 148);
+    transition: ease .31s;
+}
+
+
+

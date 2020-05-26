@@ -1,0 +1,99 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+#wrap{
+    border: black solid 1px;
+    margin: auto;
+    width: 800px;
+    background-color: rgb(76, 148, 114);
+}
+#title {
+    border: solid black 1px;
+    background-image: url(./banner.jpg);
+    height: 150px;
+}
+#title h1{
+    color: white;
+    text-align: center;
+    display: block;
+    padding-top: 60px;
+}
+
+#menu ul{
+    /* position: relative; */
+}
+#menu ul li {
+    float: left;
+    width: 24.25%;
+    list-style: none;
+    position: relative;
+    text-align: center;
+    background-color: silver;
+    /* text-decoration: none; */
+    border: 1px yellow dotted;
+    padding: 2px;
+}
+#menu ul li a{
+    text-decoration: none;
+    color: yellow;
+}
+#menu ul li ul{
+    display: none;
+    position: absolute;
+}
+#menu ul li ul li {
+    
+    width: 80%;
+   
+}
+#menu ul li ul li a{
+    display: block;
+}
+#menu ul li:hover ul{
+    display: block;
+}
+
+#menu ul li ul li a:hover  {
+   
+    
+     color: black;
+     background-color: white;
+}
+#content h4 {
+    font-size: 40px;
+    margin-top: 40px;
+    margin-left: 2px;
+    margin-bottom: 4px;
+    /* border-bottom: 1px dotted; */
+    text-decoration: underline;
+  text-decoration-style:dotted;
+    color: yellow;
+    /* float: left; */
+}
+#content  {
+    margin: 4px;
+}
+#content p {
+    clear: both;
+    font-size: 30px;
+    line-height: 45px;
+}
+#content ul {
+    /* list-style: none; */
+    margin-left: 70px;
+    
+}
+#content ul li a {
+    /* list-style: none; */
+   color: white;
+    
+}
+#footer p{
+    font-size: 18px;
+    text-align: center;
+    padding: 8px;
+    border-top: plum solid 1px;
+ }
+
+

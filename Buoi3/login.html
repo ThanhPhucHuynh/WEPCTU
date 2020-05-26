@@ -1,0 +1,93 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <title>DangNhap</title>
+    <style>
+        .root{
+            width: 80%;
+            margin:auto;
+        }
+        .root h1{
+            width: 100%;
+            display: block;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .btn-dangky{
+           float: right;
+           border: 1px solid wheat;
+           border-radius:2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="root">
+        <h1>Dang Nhap</h1>
+        <?php 
+            echo "ádas";
+            print($_COOKIE['userID']);
+                if(isset($_COOKIE['userID'])){
+                    header('Location: /ltweb/buoi3/function/infomation.php');
+                }
+
+        ?>
+
+        <form action="./function/dangnhap.php" method="post">
+            <p>Tai Khoan</p>
+            <input type="text" class="form-control" name="account" placeholder="tai khoang">
+            <br>
+            <p>Mat Khau</p>
+            <input type="password" class="form-control" name="password" placeholder="pass">
+            <br>
+            <br>
+            <button type="submit"  class="btn btn-primary">Đăng Nhập</button>
+            <a href="http://localhost/ltweb/buoi3/bai2.html">
+                <button  type="button"  class="btn btn-primary btn-dangky">Đăng Ký</button>
+            </a>
+        </form>
+        
+        <p id="congaconbexiu"></p>
+
+
+        <button onclick="LoadXMLDoc()" >
+            hihi
+        </button>
+    </div>
+
+
+
+        <script>
+            function LoadXMLDoc(){
+                var xmlhttp;
+
+                if(window.XMLHttpRequest){
+                    xmlhttp =  new XMLHttpRequest()
+                }else{
+                    xmlhttp = new ActiveXObject('Microsoft.XMLHTTP');
+                }
+                xmlhttp.onreadystatechange = function () {
+                    if(xmlhttp.readyState==4 && xmlhttp.status==200){
+                        document.getElementById('congaconbexiu').innerHTML = xmlhttp.responseText;
+                    }
+                }
+                xmlhttp.open('GET','xuly.php',true);
+                xmlhttp.send();
+
+            }
+
+
+
+
+
+        </script>
+
+</body>
+</html>

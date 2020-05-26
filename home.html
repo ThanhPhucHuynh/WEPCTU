@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThanhPhucHuynhB1706515</title>
+    <style>
+        .root {
+            position: absolute;
+            left: 50%;
+            /*top: 90%;;*/
+            /*transform: translate(-50%,-50%);*/
+            transform: translate(-50%, 0);
+            margin: auto;
+        }
+
+        .table-parent {
+            margin: auto;
+            border: black solid 1px;
+            margin-top: 10px;
+            padding: 0;
+
+        }
+
+        .table-children-left {
+            border: none;
+            background-color: silver;
+        }
+
+        .title-contact {
+            font-family: initial;
+            font-size: 16px;
+        }
+
+        .content-contact {
+            margin-left: 10px;
+            font-style: italic;
+        }
+
+        .ul-info {
+            margin-left: -10px;
+        }
+
+        .tr-contact {
+            text-transform: uppercase;
+            margin: 0;
+            margin-top: 5px;
+            font-weight: 12;
+        }
+
+        .hide_content {
+            opacity: 0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .hide {
+            position: relative;
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+        }
+
+        .hide:hover .hide_content {
+            /* background-color: rgb(20, 20, 20); */
+            opacity: 1;
+            transition: ease 0.6s;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="root">
+        <h1 id="a" style="  font-weight: 10;
+                            text-transform: uppercase;
+                            text-align: center;
+                            margin-top: 30px;
+                            color: palevioletred;">
+            Infomation</h1>
+        <div class="">
+            <table class="table-parent">
+                <tr>
+                    <td class="col-left">
+                        <table class="table-children-left">
+                            <tr class="tr-info" id="name">
+                                <td>
+                                    <p style="margin: auto;
+                                        text-align: center;
+                                        font-size: 20px;
+                                        font-weight: 10;
+                                        text-transform: uppercase;
+                                        ">Huynh Thanh Phuc</p>
+                                    <p style="text-align: center; margin: 2px;">B1706515</p>
+                                    <hr>
+
+                                </td>
+                            </tr>
+                            <tr class="tr-info">
+                                <td>
+                                    <a href="https://www.facebook.com/phuchuynhfait" target="blank">
+                                        <img id="avatar" align='center'
+                                            src="http://placekitten.com/300/300"
+                                            alt="img-avatar" style="width: 300px;
+                                            height: 300px;
+                                            border-radius: 150px;
+                                            
+                                            border: solid black 1px;"></a>
+                                    <hr>
+                                </td>
+                            </tr>
+                            <tr class="tr-info">
+                                <td>
+                                    <h3 class="tr-contact">Contact</h3>
+
+                                    <ul class="ul-info">
+                                        <li class="li-contact">
+                                            <p class="title-contact">Address:</p>
+                                            <p class="content-contact">Can Tho</p>
+                                        </li>
+                                        <li class="li-contact">
+                                            <p class="title-contact">Phone:</p>
+                                            <p class="content-contact">0347766101</p>
+                                        </li>
+                                        <li class="li-contact">
+                                            <p class="title-contact">Email:</p>
+                                            <p class="content-contact">phucb1706515@student.ctu.edu.vn</p>
+                                        </li>
+                                    </ul>
+                                    <hr>
+                                    <h3 class="tr-contact">Class</h3>
+
+                                    <p id="content-class">Lop LT web co Ngoc <br>
+                                        Chiều T3</p>
+
+                                </td>
+                            </tr>
+                            <tr class="tr-info"></tr>
+                        </table>
+                    </td>
+                    <td class="col-right" style="vertical-align: top;">
+                        <div>
+                            <h1 style="
+                                color: grey;
+                                text-align: center;
+                                margin: 5px 50px;
+                                ">Bai Tap</h1>
+                            <hr>
+                        </div>
+                        <div>
+                            <ul>
+                                <li>
+                                    <a href="./bai1.html">Bai1</a>
+                                </li>
+                                <li>
+                                    <a href="./bai2.html">Bai2</a>
+                                </li>
+                                <li>
+                                    <a href="./buoi2/bai1.html">Bai1 buoi2</a>
+                                </li>
+                                <li>
+                                    <a href="./buoi2/Bai2/div.html">Bai2 buoi2</a>
+                                </li>
+                                <li>
+                                    <a href="./buoi2/Bai3/index.html">Bai3 buoi2</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="sothich">
+            <h1>So Thich:</h1>
+
+            <div class="content-sothich">
+                <p>
+                    
+                    Trang web ua thich:
+                </p>
+                <ul>
+                    <li><a href="http://www.phimmoi.net" target="blank">Phim Moi</a></li>
+                    <li><a href="https://anime47.com/" target="blank">Anime</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+        <div>
+            <h1>Điều tuyệt vời nhất của thanh xuân <sub style="font-size: 12px;">(trích..)</sub></h1>
+            <p style="
+            
+                 text-align: justify;
+                 text-justify: inter-word;
+                 margin-bottom: 0;
+            ">
+                “Dư Hoài” <br><br>
+
+                “Hử”<br><br>
+
+                “Trước đây cậu có thích tớ không?”<br><br>
+
+                Cậu ấy dịu dàng nhìn tôi, cười khì khì, cúi đầu gãi gãi gáy, giống như chàng trai 17 tuổi cấp 3 năm đó.
+                <br><br>
+
+                Cũng tốt, vấn đề mà Cảnh Cảnh năm 17 tuổi phải hỏi, Dư Hoài năm 17 tuổi trả lời. <br><br>
+
+                Rất lâu sau, Dư Hoài nhè nhẹ gật đầu. Bỗng chốc nước mắt tôi rơi ướt đẫm mặt. <br>
+                <br>
+                Thanh xuân là gì?<br>
+                <br>
+                Là những điều chưa dám nói,
+                <br><br>
+                Những việc chưa dám làm,
+                <br><br>
+                Những mơ hồ thoáng chốc chưa từng quên,
+                <br><br>
+                Là khoảng thời gian không thể quay trở lại… dù chỉ một lần.
+                <br><br>
+                Thanh xuân là gì? Là phát sáng cũng là tiếc nuối.
+                <br><br>
+                Thanh xuân của chúng ta đều có một “ai đó”. Một cậu bạn cùng bàn bên được vây quanh bởi biết bao cô
+                nàng, một cô bạn ngốc nghếch hay ngủ quên trong giờ học, hay thậm chí là một anh chàng lớp trên phía bên
+                kia hành lang vẫn mỗi sáng rảo mắt qua phía bên này hành lang ấy. Ai cũng được và chỉ ở đó thôi... trong
+                tim. Không hề dám mở lời kết bạn, mở lời yêu thương. Đem theo những cảm xúc non nớt với một tâm hồn mong
+                manh của những cô cậu học sinh cấp 3 còn trẻ dại, chỉ dám đứng bên lề cuộc sống của người đó mà dõi
+                theo, mà thương thầm nhớ trộm. Để rồi, những lời cần nói, không thể nói, những việc phải làm, lại không
+                làm. Chỉ cho đến lúc thanh xuân từ lúc nào bỗng nhiên trôi qua vội vã, không một lời từ biệt, mới nhận
+                ra rằng bản thân thực sự đã bỏ lỡ những gì.
+                <br><br>
+                Tháng năm trôi đi, ai rồi cũng sẽ lớn. Chuyện ngày cũ, rồi chỉ là quá khứ mà thôi. Sớm muộn gì cũng mờ
+                nhạt trong tâm trí, nhưng mỗi lần nghĩ lại chắc chắn đâu đó trong lòng vẫn còn rất nhiều những khoảng
+                trống, những hoài niệm không tên. Nhưng cũng chẳng sao cả, bởi vì điều tuyệt vời nhất của thanh xuân
+                chính là có một ai đó để đem theo trong tim đến mãi sau này. Điều tuyệt vời nhất của thanh xuân – câu
+                chuyện thanh xuân không dành riêng cho ai. Mà dành cho thanh xuân của tất cả mọi người. Như một thước
+                phim quay chậm, thật chậm, đọc Điều tuyệt vời nhất của thanh xuân để cùng bật cười với những ngốc xít,
+                cùng bật khóc nơi những nuối tiếc và rồi nhắm mắt lại để thấy lòng mình trôi về những ngày thanh xuân đã
+                và đang qua.
+                <br><br>
+                “Điều tuyệt vời nhất của thanh xuân” là gì?
+                <br><br>
+                Chẳng là gì cả! Chỉ là những mơ hồ như ánh mắt ấy, nụ cười ấy... Như cậu ấy!</p>
+                <div>
+                    Vậy thôi!<div class="hide">
+
+                        <div class="hide_content">
+                            <p style="margin-left: 2px;"> Đôi khi chẳng biết làm gì cả, chỉ biết nhìn cậu rồi cười <img
+                                    style="height: 24px;
+                                width: 24px;" src="https://image.flaticon.com/icons/svg/1747/1747829.svg" alt="hi"
+                                    srcset=""> </p>
+                        </div>
+                    </div>
+                </div>
+            
+            <div>
+
+
+
+
+            </div>
+        </div>
+        <div style="margin-bottom: 20px;padding-bottom: 60px;">
+            <a href="#a" style="float: right;">Header Page</a>
+        </div>
+    </div>
+</body>
+</html>
